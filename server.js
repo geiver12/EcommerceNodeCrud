@@ -8,7 +8,7 @@ const Handlebars = require('handlebars');
 
 const { allowInsecurePrototypeAccess } = require('@handlebars/allow-prototype-access');
 
-const orderController = require('./controllers/OrderController')
+const orderController = require('./controllers/orderController')
 
 var app = express()
 
@@ -31,8 +31,8 @@ app.engine('hbs', exphbs({
 
 app.set('view engine', 'hbs')
 
-app.listen(3000, () => {
-    console.log('Server on Port::3000 ')
+app.listen(3001, () => {
+    console.log('Server on Port::3001 ')
 })
 
 app.use('/', orderController)
